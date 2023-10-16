@@ -1,4 +1,3 @@
-**README.md**:
 
 ```
 # Belediye NFT Platformu
