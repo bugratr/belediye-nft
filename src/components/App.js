@@ -3,6 +3,7 @@ import Web3 from 'web3';
 import BelediyeNFT from '../abis/BelediyeNFT.json';
 import Navbar from './Navbar';
 import Wallet from './Wallet';
+import MintNFT from './MintNFT';
 
 function App() {
   const [account, setAccount] = useState('');
@@ -62,6 +63,7 @@ function App() {
         </div>
         
         <Wallet contract={contract} account={account} />
+        <MintNFT contract={contract} account={account} />
       </div>
     </div>
   );
