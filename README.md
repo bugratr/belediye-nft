@@ -1,5 +1,3 @@
-
-```
 # Belediye NFT Platformu
 
 BelediyeNFT, belediye etkinliklerine katılanlara özel NFT'ler dağıtmak için tasarlanmış bir Ethereum tabanlı DApp'tır.
