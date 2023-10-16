@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import BelediyeNFT from '../abis/BelediyeNFT.json';
+import Navbar from './Navbar';
 
 function App() {
   const [account, setAccount] = useState('');
@@ -42,19 +43,22 @@ function App() {
 
   return (
     <div>
-      <h1>Belediye NFT Platformu</h1>
-      <p>Şu anki hesap: {account}</p>
-      <p>Şu anki Base URI: {baseURI}</p>
+      <Navbar account={account} />
+      <div className="container-fluid mt-5">
+        <h1>Belediye NFT Platformu</h1>
+        <p>Şu anki hesap: {account}</p>
+        <p>Şu anki Base URI: {baseURI}</p>
 
-      {/* Sadece sözleşme sahibi için görüntülenmeli */}
-      <div>
-        <h2>Base URI Değiştirme</h2>
-        <input 
-          type="text" 
-          placeholder="Yeni Base URI"
-          onChange={event => setBaseURI(event.target.value)}
-        />
-        <button onClick={() => changeBaseURI(baseURI)}>Değiştir</button>
+        {/* Sadece sözleşme sahibi için görüntülenmeli */}
+        <div>
+          <h2>Base URI Değiştirme</h2>
+          <input 
+            type="text" 
+            placeholder="Yeni Base URI"
+            onChange={event => setBaseURI(event.target.value)}
+          />
+          <button onClick={() => changeBaseURI(baseURI)}>Değiştir</button>
+        </div>
       </div>
     </div>
   );
