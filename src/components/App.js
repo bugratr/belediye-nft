@@ -4,6 +4,7 @@ import BelediyeNFT from '../abis/BelediyeNFT.json';
 import Navbar from './Navbar';
 import Wallet from './Wallet';
 import MintNFT from './MintNFT';
+import '../styles/App.css';
 
 function App() {
   const [account, setAccount] = useState('');
