@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import BelediyeNFT from '../abis/BelediyeNFT.json';
 import Navbar from './Navbar';
+import Wallet from './Wallet';
 
 function App() {
   const [account, setAccount] = useState('');
@@ -59,6 +60,8 @@ function App() {
           />
           <button onClick={() => changeBaseURI(baseURI)}>Değiştir</button>
         </div>
+        
+        <Wallet contract={contract} account={account} />
       </div>
     </div>
   );
